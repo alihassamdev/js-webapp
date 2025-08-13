@@ -1,0 +1,42 @@
+{
+  "users": [
+    {
+      "id": "a8a2",
+      "name": "Hassam",
+      "surname": "Ali",
+      "phoneNum": "03058315628",
+      "email": "hassamalidev@gmail.com",
+      "password": "Hassam12345",
+      "termsCondition": true
+    },
+    {
+      "id": "8a03",
+      "name": "Hassam",
+      "surname": "Ali",
+      "phoneNum": "03058315628",
+      "email": "hassamalidev2@gmail.com",
+      "password": "Hassam12345",
+      "termsCondition": true
+    }
+  ],
+  "todos": [
+    {
+      "id": "3zq4ftz9r",
+      "userId": "a8a2",
+      "text": "Test user 1",
+      "status": "incomplete"
+    },
+    {
+      "id": "gw97ejeux",
+      "userId": "a8a2",
+      "text": "Test Task user 1",
+      "status": "incomplete"
+    },
+    {
+      "id": "3bz2hpyv0",
+      "userId": "8a03",
+      "text": "Test Task user 2",
+      "status": "done"
+    }
+  ]
+}

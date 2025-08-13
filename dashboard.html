@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/dashboard.css">
+    <title>Dashboard</title>
+</head>
+
+<body id="pageBody">
+    <!-- SideBar -->
+    <div class="sidebar">
+        <div class="logo-wrapper">
+            <div class="logo"><a href="#"><img src="/assets/img/Logo.svg" alt="logo"></a></div>
+            <div class="sidebar-toggle"><a href="#"><img src="/assets/img/slide.svg" alt="logo" srcset=""></a></div>
+        </div>
+        <ul class="sidebar-items-wrapper">
+            <li class="sidebar-item">
+                <a class="sidebar-item-link" href="#" data-target="dashboard">
+                    <!-- <span class="sidebar-icon"><img src="/assets/img/logo-icon.svg" alt="icon">Dashboard</span> -->
+                    <span class="sidebar-icon"><img src="/assets/img/logo-icon.svg" alt="icon">Dashboard</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a class="sidebar-item-link" href="#" data-target="add-items">
+                    <span class="sidebar-icon"><img src="/assets/img/plus.svg" alt="icon">Add Item</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a class="" href="#" id="logout-btn">
+                    <span class="sidebar-icon"><img src="assets/img/logout.png" alt="icon">Log Out</span>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="main">
+        <!-- Header -->
+        <div class="header">
+            <div class="search-container">
+                <span class="search-icon"><img src="/assets/img/search.svg" alt="icon"></span>
+                <input type="text" placeholder="Search or type a command">
+            </div>
+            <div class="right-container">
+                <div><a href="#"><img src="/assets/img/setting.png" alt="setting-icon"></a></div>
+                <div><a href="#"><img src="/assets/img/bell.png" alt="bell-icon"></a></div>
+                <div><a href="#"><img src="/assets/img/profile.png" alt="profile-img"></a></div>
+            </div>
+        </div>
+
+        <!-- Dashboard-Content -->
+        <div id="dashboard" class="content active">
+            <!-- Todo's List -->
+            <div class="cards-container">
+                <div class="card-header">
+                    <h2>Todo</h2>
+                    <div class="icon"><a href="#"><img src="/assets/img/dots.png" alt=""></a></div>
+                </div>
+
+                <ul class="cards" id="incomplete-list">
+                    <!-- <li class="card">
+                        <div class="card-img"></div>
+                        <h3 class="card-title">Product Review for UI8 Market</h3>
+                        
+                        <form class="task-status">
+                            <label>
+                                <input type="checkbox" name="task-inprogress" id="task-inprogress">
+                                In Progress
+                            </label>
+                            <label>
+                                <input type="checkbox" name="task-done" id="task-done">
+                                Done
+                            </label>
+                        </form>
+
+                        <div class="card-btns">
+                            <button type="submit" class="delete-btn" id="delete-btn">
+                                <img src="/assets/img/bin.svg" alt="">
+                            </button>
+                            <button type="submit" class="edit-btn" id="edit-btn">
+                                <img src="/assets/img/pencil.svg" alt="">
+                            </button>
+                        </div>
+                    </li>                  -->
+                </ul>
+
+                <div class="new-task-container">
+                    <div class="add-task">
+                        <img src="/assets/img/plus-plain.png" alt="" class="add-new-task">Add new task
+                    </div>
+                    <div>
+                        <img src="/assets/img/window.svg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- In Progress List -->
+            <div class="cards-container">
+                <div class="card-header">
+                    <h2>Doing</h2>
+                    <div class="icon"><a href="#"><img src="/assets/img/dots.png" alt=""></a></div>
+                </div>
+                <ul class="cards" id="inprogress-list">
+
+                </ul>
+                <div class="new-task-container">
+                    <div class="add-task">
+                        <img src="/assets/img/plus-plain.png" alt="" class="add-new-task">Add new task
+                    </div>
+                    <div>
+                        <img src="/assets/img/window.svg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Completed List -->
+            <div class="cards-container">
+                <div class="card-header">
+                    <h2>Done</h2>
+                    <div class="icon"><a href="#"><img src="/assets/img/dots.png" alt=""></a></div>
+                </div>
+                <ul class="cards" id="completed-list">
+
+                </ul>
+                <div class="new-task-container">
+                    <div class="add-task">
+                        <img src="/assets/img/plus-plain.png" alt="" class="add-new-task">Add new task
+                    </div>
+                    <div>
+                        <img src="/assets/img/window.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add-Items-Content -->
+        <div id="add-items" class="content">
+            <form id="add-todo-form" class="form">
+                <div class="form-group">
+                    <label for="new-todo-text" class="label">Items</label>
+                    <input type="text" id="new-todo-text" placeholder="" required>
+                </div>
+                <div class="form-group">
+                    <label for="new-todo-img" class="label">Image</label>
+                    <input type="text" id="new-todo-img" placeholder="">
+                </div>
+
+                <button type="submit">Add</button>
+            </form>
+        </div>
+
+        <!-- Edit Todo Content -->
+        <div id="edit-todo" class="content">
+            <form id="edit-todo-form">
+                <input type="hidden" id="edit-todo-id">
+                <div class="form-group">
+                    <label for="edit-todo-text">Items</label>
+                    <input type="text" id="edit-todo-text" placeholder="Edit todo text" required>
+                </div>
+                <div class="form-group">
+                    <label for="edit-todo-img">Image</label>
+                    <input type="text" id="edit-todo-img" placeholder="Edit todo Image">
+                </div>
+
+                <button type="submit">Update</button>
+            </form>
+        </div>
+
+
+    </div>
+
+    <script type="module" src="assets/js/dashboard.js"></script>
+</body>

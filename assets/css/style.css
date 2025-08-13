@@ -1,0 +1,55 @@
+/* Reset & Base Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Buttons */
+button {
+    cursor: pointer;
+    border: none;
+    padding: 0.6em 1.2em;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Inputs */
+input, select, textarea {
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Container utility */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+}
+.container-full{
+    width: 100%;
+    margin: auto;   }
