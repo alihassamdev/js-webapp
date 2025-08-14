@@ -22,9 +22,9 @@
             <button class="google-btn">Sign Up using <span>Google</span></button>
             <div>
                 <span class="hr-line"></span>
-                 <p class="login-link">
-                Already have an account &nbsp; <a href="login.html">Log In</a>
-            </p>
+                <p class="login-link">
+                    Already have an account &nbsp; <a href="login.html">Log In</a>
+                </p>
                 <span class="hr-line"></span>
             </div>
 
@@ -32,31 +32,43 @@
                 <div class="name-fields">
                     <div class="form-group">
                         <label>Name</label>
-                        <input type="text" placeholder="Name" id="name"/>
+                        <input type="text" placeholder="Name" id="name" />
                         <span id="name-error" class="error"></span>
                     </div>
                     <div class="form-group">
                         <label>Surname</label>
-                        <input type="text" placeholder="Surname" id="surname"/>
+                        <input type="text" placeholder="Surname" id="surname" />
                         <span id="surname-error" class="error"></span>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label>Phone Number</label>
-                    <input type="text" placeholder="Phone Number" id="phone-number"/>
+                    <input type="text" placeholder="Phone Number" id="phone-number" />
                     <span id="phone-error" class="error"></span>
                 </div>
 
                 <div class="form-group">
                     <label>Email Address</label>
-                    <input type="email" placeholder="Email Address" id="email"/>
+                    <input type="email" placeholder="Email Address" id="email" />
                     <span id="email-error" class="error"></span>
                 </div>
 
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label>Password</label>
-                    <input type="password" placeholder="Password" id="password"/>
+                    <div>
+                        <input type="password" placeholder="Password" id="password"/>
+                        <span><img src="" alt=""></span>
+                    </div>
+                    <span id="password-error" class="error"></span>
+                </div> -->
+
+                <label for="password">Password</label>
+                <div class="form-group">
+                    <div class="password-wrapper">
+                        <input type="password" id="password" placeholder="Password">
+                        <img src="/assets/img/open-eye.png" class="toggle-password" alt="Show Password" width="20">
+                    </div>
                     <span id="password-error" class="error"></span>
                 </div>
 
@@ -65,7 +77,7 @@
                     <p class="terms-condition">By Signing Up I agree with <a href="#">Terms & Conditions</a></p>
                     <span id="terms-error" class="error"></span>
                 </div>
-                
+
                 <button type="submit" class="submit-btn" id="signin-btn" disabled>Sign Up</button>
             </form>
         </div>

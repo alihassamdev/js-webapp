@@ -14,7 +14,7 @@
     <div class="sidebar">
         <div class="logo-wrapper">
             <div class="logo"><a href="#"><img src="/assets/img/Logo.svg" alt="logo"></a></div>
-            <div class="sidebar-toggle"><a href="#"><img src="/assets/img/slide.svg" alt="logo" srcset=""></a></div>
+            <div class="sidebar-toggle"><a href="#"><img src="/assets/img/slide.svg" alt="" srcset=""></a></div>
         </div>
         <ul class="sidebar-items-wrapper">
             <li class="sidebar-item">
@@ -40,15 +40,29 @@
     <div class="main">
         <!-- Header -->
         <div class="header">
-            <div class="search-container">
-                <span class="search-icon"><img src="/assets/img/search.svg" alt="icon"></span>
-                <input type="text" placeholder="Search or type a command">
+            <div class="mobile-logo-wrapper">
+                <div class="logo"><a href="#"><img src="/assets/img/Logo.svg" alt="logo"></a></div>
+                <button id="sidebar-toggle-btn" class="sidebar-toggle-btn">
+                    <img src="/assets/img/slide.svg" alt="menu icon" />
+                </button>
             </div>
-            <div class="right-container">
-                <div><a href="#"><img src="/assets/img/setting.png" alt="setting-icon"></a></div>
-                <div><a href="#"><img src="/assets/img/bell.png" alt="bell-icon"></a></div>
-                <div><a href="#"><img src="/assets/img/profile.png" alt="profile-img"></a></div>
+
+            <div class="header-content">
+                <div class="search-container">
+                    <span class="search-icon"><img src="/assets/img/search.svg" alt="icon"></span>
+                    <input type="text" id="search-todo-text" placeholder="Search or type a command">
+                    <button id="search-todo-btn">Search</button>
+                </div>
+                <div class="right-container">
+                    <div><a href="#" id="update-user-btn"><img src="/assets/img/setting.png" alt="setting-icon"></a>
+                    </div>
+                    <div><a href="#"><img src="/assets/img/bell.png" alt="bell-icon"></a></div>
+                    <div><a href="#"><img src="/assets/img/profile.png" alt="profile-img"></a></div>
+                </div>
             </div>
+
+            <!-- <input type="text" id="search-todo-text" placeholder="Search todos..." />
+            <button id="search-todo-btn">Search</button> -->
         </div>
 
         <!-- Dashboard-Content -->
@@ -62,7 +76,9 @@
 
                 <ul class="cards" id="incomplete-list">
                     <!-- <li class="card">
-                        <div class="card-img"></div>
+                        <div class="card-img">
+                            <img src="/assets/img/todo-images/todo-1.jpg" alt="">
+                        </div>
                         <h3 class="card-title">Product Review for UI8 Market</h3>
                         
                         <form class="task-status">
@@ -145,10 +161,10 @@
                 </div>
                 <div class="form-group">
                     <label for="new-todo-img" class="label">Image</label>
-                    <input type="text" id="new-todo-img" placeholder="">
+                    <input type="file" id="new-todo-img" placeholder="">
                 </div>
 
-                <button type="submit">Add</button>
+                <button type="submit" id="add-items-btn">Add</button>
             </form>
         </div>
 
@@ -161,11 +177,76 @@
                     <input type="text" id="edit-todo-text" placeholder="Edit todo text" required>
                 </div>
                 <div class="form-group">
-                    <label for="edit-todo-img">Image</label>
-                    <input type="text" id="edit-todo-img" placeholder="Edit todo Image">
+                    <label for="update-todo-img" class="label">Image</label>
+                    <input type="file" id="update-todo-img" placeholder="">
                 </div>
 
-                <button type="submit">Update</button>
+                <button type="submit" id="update-items-btn">Update</button>
+            </form>
+        </div>
+
+        <!-- Search Todo's-Content -->
+        <div id="search-todo" class="content">
+            <!-- Todo's List -->
+            <div class="cards-container">
+                <div class="card-header">
+                    <h2>Search Todo's</h2>
+                    <div class="icon"><a href="#"><img src="/assets/img/dots.png" alt=""></a></div>
+                </div>
+
+                <ul class="cards" id="search-results-list">
+                </ul>
+
+                <div class="new-task-container">
+                    <div class="add-task">
+                        <img src="/assets/img/plus-plain.png" alt="" class="add-new-task">Add new task
+                    </div>
+                    <div>
+                        <img src="/assets/img/window.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Update User Profile Content -->
+        <div id="update-user-profile" class="content">
+            <form id="update-user-form">
+                <div class="name-fields">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" placeholder="Name" id="update-user-name" />
+                        <span id="name-error" class="error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Surname</label>
+                        <input type="text" placeholder="Surname" id="update-user-surname" />
+                        <span id="surname-error" class="error"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="text" placeholder="Phone Number" id="update-user-phone" />
+                    <span id="phone-error" class="error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="Email Address" id="update-user-email" />
+                    <span id="email-error" class="error"></span>
+                </div>
+
+                <label for="password">Password</label>
+                <div class="form-group">
+                    <div class="password-wrapper">
+                        <input type="password" id="update-user-password" placeholder="Password">
+                        <img src="/assets/img/open-eye.png" class="toggle-password" alt="Show Password" width="20">
+                    </div>
+                    <span id="password-error" class="error"></span>
+                </div>
+
+                <button type="submit" class="submit-btn" id="signin-btn">Update </button>
             </form>
         </div>
 

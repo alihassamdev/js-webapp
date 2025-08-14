@@ -14,10 +14,11 @@ button{
 }
 
 .signup-container {
-    width: 754px;
+    max-width: 754px;
     margin: 0 auto;
     background-color: #fff;
-    padding: 0 1rem;
+    padding: 64px 1rem;
+    width: 100%;
 }
 
 .signup-container h2 {
@@ -78,7 +79,9 @@ button{
     margin-bottom: 20px;
     width: 100%;
 }
-
+.password-wrapper{
+    position: relative;
+}
 .name-fields {
     display: flex;
     gap: 20px;
@@ -142,6 +145,17 @@ input[type="checkbox"]{
 .error{
     color: crimson;
 }
+
+.form-group .toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 16px;
+    color: #666;
+    user-select: none;
+  }
 
 .submit-btn {
     width: 100%;

@@ -88,3 +88,31 @@ async function checkUser() {
     }
 }
 
+// Toggle Password Field 
+const passwordInput = document.getElementById("password");
+  const togglePassword = document.querySelector(".toggle-password");
+
+  togglePassword.addEventListener("click", () => {
+    if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+      togglePassword.src = "/assets/img/close-eye.png";
+    } else {
+      passwordInput.type = "password";
+      togglePassword.src = "/assets/img/open-eye.png";
+    }
+  });
+
+
+//   Handle the Login Button State
+const emailInput = document.getElementById("email");
+const loginBtn = document.getElementById("login-btn");
+
+function updateButtonState() {
+  loginBtn.disabled = emailInput.value.trim() === "" || passwordInput.value.trim() === "";
+}
+
+emailInput.addEventListener("input", updateButtonState);
+passwordInput.addEventListener("input", updateButtonState);
+
+// Initial state
+updateButtonState();
